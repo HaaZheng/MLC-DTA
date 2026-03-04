@@ -4,7 +4,7 @@
 With the development of computer-aided drug design in the field of pharmaceutical research, drug-target affinity (DTA) prediction is of great significance for compound screening and drug development. Recent studies have widely adopted deep learning techniques for DTA prediction, focusing on feature extraction from sequences and graph structures. Despite progress, these methods often overlook interaction relationships at the network level. Moreover, graph-based molecular representation methods relying on graph neural networks (GNNs) fail to incorporate 3D molecular structural information, limiting their potential for DTA prediction. To overcome these issues, we propose MLC-DTA, a computational method specifically designed for drug-target affinity prediction tasks. MLC-DTA uses equivariant graph neural networks to extract the structural features of drugs and targets, retaining the geometric equivariance of proteins while capturing the specific structural information of drug molecules. In addition, it integrates the interaction relationships between drugs and targets to obtain the network-level features, understanding the DTA interactions from multiple perspectives of molecules and networks. Finally, a contrastive learning strategy is introduced to maximize mutual information at both the molecular and network levels, thereby improving the prediction performance. Comparative experiments and case analyses on two datasets show that MLC-DTA has a significant improvement in accuracy.
 
 <div align=center>
-<img src="MLC-DTA.png" width=75%>
+<img src="MLC-DTA.jpg" width=75%>
 </div>
 
 ## Preparation
