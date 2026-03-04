@@ -88,15 +88,7 @@ def train_predict():
     # device = 'cpu'
     dataset = args.dataset
 
-    # model = CSCoDTA(tau=args.tau,
-    #                 lam=args.lam,
-    #                 ns_dims=[affinity_graph.num_drug + affinity_graph.num_target + 2, 512, 256],
-    #                 d_ms_dims=[78, 78, 78 * 2, 256],
-    #                 t_ms_dims=[54, 54, 54 * 2, 256],
-    #                 embedding_dim=128,
-    #                 dropout_rate=args.edge_dropout_rate)
-
-    model = CSCoDTA(tau=args.tau,
+    model = MLC_DTA(tau=args.tau,
                     lam=args.lam,
                     ns_dims=[affinity_graph.num_drug + affinity_graph.num_target + 2, 512, 128],
                     d_ms_dims=[78, 78, 78 * 2, 128],
@@ -167,9 +159,7 @@ if __name__ == '__main__':
     from itertools import chain
     from data_process_egnn import load_data, process_data, get_drug_molecule_graph, get_target_molecule_graph
     from utils_egnn import GraphDataset, collate, model_evaluate
-    # from model_egnn import CSCoDTA, PredictModule
-    # from model_wo_EGNN import CSCoDTA, PredictModule
-    from model_wo_Constrative import CSCoDTA, PredictModule
+    from model_wo_Constrative import MLC_DTA, PredictModule
 
     os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
     warnings.filterwarnings("ignore")
@@ -193,6 +183,7 @@ if __name__ == '__main__':
     # args = parser.parse_args()
 
     train_predict()
+
 
 
 
