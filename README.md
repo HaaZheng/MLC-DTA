@@ -26,6 +26,7 @@ The repo mainly requires the following packages.
 ## Experimental Procedure
 ### Create Dataset
 run the script below to prepare target molecule graphs and drug molecule graphs.
+The complete data file can be provided upon request for scientific research needs.
 
 ```python 
 python3 data_process_egnn.py 
