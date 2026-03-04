@@ -297,9 +297,9 @@ class Contrast(nn.Module):
         return self.lam * lori_a + (1 - self.lam) * lori_b, torch.cat((za_proj, zb_proj), 1)
 
 
-class CSCoDTA(nn.Module):
+class MLC_DTA(nn.Module):
     def __init__(self, tau, lam, ns_dims, d_ms_dims, t_ms_dims, embedding_dim=128, dropout_rate=0.2):
-        super(CSCoDTA, self).__init__()
+        super(MLC_DTA, self).__init__()
 
         self.output_dim = embedding_dim * 2
 
@@ -348,3 +348,4 @@ class PredictModule(nn.Module):
         out = mlp_embeddings[-1]
 
         return out, link_embeddings
+
